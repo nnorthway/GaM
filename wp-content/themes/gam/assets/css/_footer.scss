@@ -1,0 +1,26 @@
+footer {
+  background: $BrandPrimary;
+  padding: 20px 0;
+  
+  * {
+    text-align: center;
+    color: white;
+  }
+  .menu-social-container {
+    list-style: none;
+    display: inline-block;
+    li {
+      display: inline-block;
+      a {
+        text-decoration: none;
+        i[class^='socicon-'] {
+          color: white !important;
+          font-size: 32px;
+          &:hover {
+            color: $text !important;
+          }
+        }
+      }
+    }
+  }
+}

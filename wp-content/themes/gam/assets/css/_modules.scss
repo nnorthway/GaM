@@ -1,0 +1,237 @@
+.img-icon {
+  height: 2.5em;
+  width: auto;
+  background: $text;
+  &:hover {
+    background: $BrandPrimary;
+  }
+}
+
+i[class^="socicon-"] {
+  color: $text;
+  &:hover {
+    color: $BrandPrimary;
+  }
+}
+
+.socicon-stitcher {
+  background-color: white;
+  background-image: url(../gam/assets/images/stitcher-reverse.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: block;
+  height: 15px;
+  width: 32px;
+  position: relative;
+  top: -7px;
+  &:hover {
+    background-color: $text;
+  }
+}
+.socicon-podomatic {
+  background-color: white;
+  background-image: url('../gam/assets/images/podomatic-reverse.png');
+  background-size: cover;
+  display: block;
+  height: 32px;
+  width: 32px;
+  &:hover {
+    background-color: $text;
+  }
+}
+.socicon-tunein {
+  background-color: white;
+  background-image: url('../gam/assets/images/tunein-reverse.png');
+  background-size: cover;
+  display: block;
+  height: 32px;
+  width: 32px;
+  &:hover {
+    background-color: $text;
+  }
+}
+
+.input-field {
+  display: block;
+  width: 100%;
+  padding-bottom: 15px;
+  &::after,
+  &:after {
+    content: '';
+    display: block;
+    width: calc(100% + 20px);
+    height: 3px;
+    -webkit-transition: width .5s ease, background-color .5s ease;
+    transition: width .5s ease, background-color .5s ease;
+    background-color: $BrandPrimary;
+  }
+  &.active {
+    &:after,
+    &::after {
+      background-color: transparent;
+      width: 0px;
+      -webkit-transition: width .5s ease, background-color .5s ease;
+      transition: width .5s ease, background-color .5s ease;
+    }
+  }
+  input,
+  textarea {
+    padding: 10px;
+    width: 100%;
+  }
+}
+label {
+  color: $BrandPrimary;
+}
+input,
+textarea {
+  border: none;
+  outline: none;
+  font-size: 1.3em;
+  &:active,
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+
+input[type='submit'],
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 20px 10px 20px;
+  background: $BrandPrimary;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  &:hover {
+    background: darken($BrandPrimary, 10%);
+    cursor: pointer;
+    color: white;
+  }
+}
+
+.comments {
+  .comment {
+    list-style: none;
+    border-bottom: 3px solid $BrandPrimary;
+    background: white;
+    padding: 8px;
+    &.odd,
+    .comment {
+      background: $Cream;
+      margin: 10px 0;
+      border-bottom: none;
+    }
+    .comment-author {
+      width: 100%;
+      text-align: right;
+      cite {
+        display: block;
+      }
+      .says {
+        display: none;
+      }
+    }
+    .comment-meta {
+      text-align: right;
+    }
+    .reply {
+      padding: 8px;
+      text-align: right;
+      a {
+        @extend .btn;
+      }
+    }
+    .children {
+      .comment {
+        border-left: 2px solid $BrandPrimary;
+        .comment-body {
+          p {
+            padding: 10px 0;
+          }
+        }
+      }
+      .depth-2 {margin-left: 2px;}
+      .depth-3 {margin-left: 4px;}
+      .depth-4 {margin-left: 6px;}
+      .depth-5 {margin-left: 8px;}
+      .depth-6 {margin-left: 10px;}
+      .depth-7 {margin-left: 12px;}
+      .depth-8 {margin-left: 14px;}
+      .depth-9 {margin-left: 16px;}
+      .depth-10 {margin-left: 18px;}
+      .depth-11 {margin-left: 20px;}
+    }
+  }
+}
+.comment-respond {
+  margin-top: 20px;
+  background: white;
+  padding: 8px;
+  .comment-notes {
+    font-size: .8em;
+  }
+  p[class^='comment-form-'] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 20px 0 0 0;
+    &::after,
+    &:after {
+      content: '';
+      display: block;
+      width: calc(100%);
+      height: 3px;
+      -webkit-transition: width .5s ease, background-color .5s ease;
+      transition: width .5s ease, background-color .5s ease;
+      background-color: $BrandPrimary;
+    }
+    &.active {
+      &:after,
+      &::after {
+        background-color: transparent;
+        width: 0px;
+        -webkit-transition: width .5s ease, background-color .5s ease;
+        transition: width .5s ease, background-color .5s ease;
+      }
+    }
+    label {
+      color: $BrandPrimary;
+    }
+    input,
+    textarea {
+      width: 100%;
+    }
+  }
+  input[type='submit'] {
+    margin-top: 20px;
+  }
+}
+
+.pagination {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  a {
+    @extend .btn;
+  }
+}

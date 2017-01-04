@@ -1,0 +1,112 @@
+body {
+  text-rendering: optimizeLegibility;
+  font: 100%/1.5 'Roboto', 'Open Sans', sans-serif;
+  transition: font-size .8s;
+  transition: line-height .8s;
+  main {
+    @include breakpoint(xlg) {
+      font-size: 125%;
+      line-height: 1.75;
+      transition: font-size .8s;
+      transition: line-height .8s;
+    }
+  }
+}
+
+body,
+input,
+button {
+  font-smoothing: antialiased;
+}
+
+h1 {font-size: 2em;}
+h2 {font-size: 1.5em;}
+h3 {font-size: 1.17em;}
+h4 {font-size: 1em;}
+h5 {font-size: 0.83em;}
+h6 {font-size: .75em;}
+
+p,
+small {
+  color: $text;
+  word-break: break-all;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.indent p {
+  line-height: 1.5;
+  margin: 0 0 1em;
+  hyphens: auto;
+  text-indent: 2em;
+}
+
+.indent p+p {
+  text-indent: 2em;
+  margin-top: -1em;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+    color: $BrandPrimary;
+  }
+}
+
+strong {font-weight: bold;}
+
+em,
+i
+{
+  font-style: italic;
+}
+
+code,
+pre,
+.code {
+  font-family: monospace, serif;
+  font-size: 1em;
+  background: $gray;
+  color: $dark;
+  border-radius: 5px;
+}
+
+pre {
+  padding: 1em;
+}
+
+blockquote {
+  border-left: 4px solid $dark;
+  padding-left: 10px;
+  font-size: 1.3em;
+  &.text-center {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  p,
+  h1, h2, h3, h4, h5, h6 {
+    orphans: 3;
+    widows: 3;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+}
+
+.material-icons {
+  position: relative;
+  top: 5px;
+  z-index: 0;
+}

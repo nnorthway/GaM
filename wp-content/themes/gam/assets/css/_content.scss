@@ -1,0 +1,112 @@
+body {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+main {
+  margin-left: -3px;
+  min-height: 100vh;
+  background: $gray;
+  overflow-x: hidden;
+  @media (max-width: 768px) {
+    margin-top: 58px;
+  }
+  .page {
+    padding-top: 25px;
+    min-height: calc(100vh - 125px);
+  }
+  &.single,
+  &.page {
+    .post {
+      min-height: calc(100vh - 125px);
+      border-bottom: none;
+    }
+    .thumbnail {
+      width: 100%;
+      text-align: center;
+      img {
+        max-width: 50%;
+        margin: 0 auto;
+      }
+    }
+  }
+  .post {
+    margin: 25px auto;
+    border-bottom: 5px solid $BrandSecondary;
+    .head {
+      padding: 3.125%;
+      .post-thumb {
+        width: 100%;
+        text-align: center;
+        img {
+          width: 100%;
+          max-width: 614px;
+          height: auto;
+          margin: 0 auto;
+        }
+      }
+      .meta {
+        font-size: .75em;
+        .material-icons {
+          font-size: 1.5em;
+        }
+      }
+      .social {
+        padding: 3em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        text-align: center;
+        &:before {
+          content: "Listen";
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 100%;
+                  flex: 0 0 100%;
+          display: block;
+          font-size: 2.5em;
+        }
+        [class^='socicon-'] {
+          font-size: 2.5em;
+        }
+        a {
+          padding: 0 5px;
+          text-decoration: none;
+        }
+      }
+    }
+    .thumbnail {
+      text-align: center;
+      max-height: 300px;
+      @include breakpoint('xlg') {
+        max-height: 500px;
+      }
+      img {
+        height: auto;
+        max-height: 300px;
+        @include breakpoint('xlg') {
+          max-height: 500px;
+        }
+        width: auto;
+        max-width: 100%;
+      }
+    }
+    .body {
+      padding: 3.125%;
+    }
+    .foot {
+      padding: 20px;
+      .meta {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

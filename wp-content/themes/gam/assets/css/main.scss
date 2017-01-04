@@ -1,0 +1,23 @@
+/*
+  Theme Name: Game And Movie Theme
+  Theme URI: http://gamtheme.natenorthway.com/
+  Author: Nate Northway
+  Author URI: http://natenorthway.com
+  Description: A lightweight theme based on SASS and designed for Game and Movie Podcast
+  Version: 1.0
+  License: GNU General Public License v2 or later
+  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+  Tags, black, white, light, dark, one-column
+  */
+
+@import 'reset';
+@import 'colors';
+@import 'breakpoints';
+@import 'flexboxgrid';
+@import 'utilities';
+@import 'typography';
+@import 'modules';
+@import 'header';
+@import 'footer';
+@import 'sidebar';
+@import 'content';
