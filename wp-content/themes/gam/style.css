@@ -1111,7 +1111,7 @@ input[type='submit'],
   justify-content: space-between; }
 
 header {
-  background: white;
+  background: #292929;
   border-right: 3px solid #FA2E83;
   z-index: 999;
   height: 100%;
@@ -1143,10 +1143,11 @@ header {
           header nav li.current-menu-item a:hover {
             background-color: #fb60a1; }
       header nav li a {
+        color: white;
         display: block;
         padding: 20px; }
         header nav li a:hover {
-          color: white;
+          color: #cccccc;
           background-color: #FA2E83; }
   header form .input-field label {
     display: block; }
@@ -1187,11 +1188,11 @@ header {
         header #menu-toggle:hover {
           cursor: pointer; }
       header nav {
+        background: #292929;
         display: none;
         position: absolute;
         top: 58px;
-        left: 0;
-        background: white; }
+        left: 0; }
         header nav.active {
           width: 100%;
           display: -webkit-box;
@@ -1215,7 +1216,8 @@ header {
         top: 378px;
         left: 0;
         background: white;
-        border-bottom: 3px solid #FA2E83; }
+        border-bottom: 3px solid #FA2E83;
+        background: #292929; }
         header form.active {
           display: block;
           width: 100%;
