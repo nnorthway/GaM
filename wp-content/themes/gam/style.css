@@ -1118,7 +1118,10 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-flow: column nowrap;
   flex-flow: column nowrap; }
   header .logo img {
     width: 100%;
@@ -1128,6 +1131,8 @@ header {
     color: #FA2E83;
     background: transparent; }
   header nav {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
     flex: 1 1 auto; }
     header nav li {
       list-style: none; }
@@ -1143,15 +1148,29 @@ header {
         header nav li a:hover {
           color: white;
           background-color: #FA2E83; }
+  header form .input-field label {
+    display: block; }
+  header form .input-field span input {
+    width: 50%; }
+  header form .input-field:after {
+    width: calc(50% + 20px); }
   header a {
     text-decoration: none; }
   @media (max-width: 768px) {
     header {
       border-bottom: 3px solid #FA2E83;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-flow: row nowrap;
       flex-flow: row nowrap;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
       align-items: flex-start;
+      -ms-flex-line-pack: start;
       align-content: flex-start;
       position: fixed;
       bottom: 0;
@@ -1172,17 +1191,47 @@ header {
         position: absolute;
         top: 58px;
         left: 0;
-        background: white;
-        border-bottom: 3px solid #FA2E83; }
+        background: white; }
         header nav.active {
           width: 100%;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center;
+          -ms-flex-line-pack: stretch;
           align-content: stretch;
+          -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
           align-items: stretch; }
           header nav.active a {
-            text-align: center; } }
+            text-align: center; }
+      header form {
+        display: none;
+        position: absolute;
+        top: 378px;
+        left: 0;
+        background: white;
+        border-bottom: 3px solid #FA2E83; }
+        header form.active {
+          display: block;
+          width: 100%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-around;
+          -ms-flex-line-pack: stretch;
+          align-content: stretch;
+          -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+          align-items: stretch; } }
 
 footer {
   background: #FA2E83;

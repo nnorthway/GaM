@@ -44,5 +44,6 @@
         <li><a>...</a></li>
         <li><a>...</a></li>
         */
+      get_search_form();
     ?>
   </header>

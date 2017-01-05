@@ -2,12 +2,16 @@ $(document).ready(function() {
   $("#menu-toggle").on('click', function() {
     if ($('nav').hasClass('active')) {
       $(this).find('.material-icons').text('menu');
-      $('nav').slideUp(400, function() {
-        $('nav').removeClass('active');
-      });
+      $("header form").slideUp(400, function() {
+        $('nav').slideUp(400, function() {
+          $("nav, header form").removeClass('active');
+        })
+      })
     } else {
       $(this).find('.material-icons').text('close');
-      $('nav').addClass('active').slideDown();
+      $('nav').addClass('active').slideDown(400, function() {
+        $("header form").addClass('active').slideDown();
+      });
     }
   })
 
