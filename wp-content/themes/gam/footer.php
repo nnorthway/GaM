@@ -1,6 +1,6 @@
 <footer class='row'>
-  <p class='col-xs-6'>&copy; <?php echo date('Y') . " "; bloginfo('name'); ?></p>
-  <div id='social' class='col-xs-6'>
+  <p class='col-xs-12 col-sm-6'>&copy; <?php echo date('Y') . " "; bloginfo('name'); ?></p>
+  <div id='social' class='col-xs-12 col-sm-6'>
     <?php
     $params = array (
       'menu' => 'Social',
