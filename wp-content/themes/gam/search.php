@@ -18,9 +18,9 @@ $search = new WP_Query($search_query);
 
 get_header();
 ?>
-  <main class='col-sm-9 col-sm-offset-3'>
+  <main class='col-sm-9 col-sm-offset-3 col-xs-12'>
     <div class='row'>
-      <div class='col-sm-8 col-sm-offset=2 col-xs-10 col-xs-offset-1'>
+      <div class='col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2'>
         <h1>Search</h1>
         <?php get_search_form(); ?>
       </div>
@@ -29,9 +29,8 @@ get_header();
       <div class='col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1'>
         <?php
         $total_results = $search->found_posts;
-
         if ($total_results > 0) {
-        ?><h3>Total Results: <?= $total_results; ?></h3>
+        ?><br /><h3>Total Results: <?= $total_results; ?></h3>
         <?php
         }
         ?>
