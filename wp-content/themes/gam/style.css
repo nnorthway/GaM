@@ -1260,7 +1260,20 @@ main {
   margin-left: -3px;
   min-height: 100vh;
   background: #efefef;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
   @media (max-width: 768px) {
     main {
       margin-top: 58px; } }
