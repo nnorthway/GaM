@@ -61,6 +61,12 @@ $(window).on('resize', function() {
   }
 })
 
+$(window).on('scroll', function() {
+  if ($(window).width() < 768) {
+    fixHeader();
+  }
+})
+
 function navToggle() {
   if ($('nav').hasClass('active')) {
     $('#menu-toggle .material-icons').text('menu');
@@ -100,4 +106,16 @@ function mobileSearchBar() {
   var offset = ulHeight + navHeight + headerHeight;
   $("header form").css({"top": offset});
   $("header form").addClass('active').slideDown();
+}
+
+function fixHeader() {
+  var pageY = window.pageYOffset;
+  var pos = $("header").position().top;
+  if (!$('nav').hasClass('active')) {
+    $("header").css({"top": pageY});
+  } else {
+    if (pos > pageY) {
+      $("header").css({"top": pageY});
+    }
+  }
 }
