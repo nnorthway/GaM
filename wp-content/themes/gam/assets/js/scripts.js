@@ -86,7 +86,6 @@ function catMenu() {
     var pos = $("#cats").position().top;
     var ulHeight = $("#cats ul").height();
     var liCount = $("#cats ul li").length;
-    console.log(liCount);
     var offset = pos - ulHeight - ((liCount * 20) - (liCount * 1.3));
     $("#cats ul").css({"top": offset});
   } else {
@@ -99,9 +98,6 @@ function mobileSearchBar() {
   var navHeight = $("nav").height();
   var headerHeight = $("header").height();
   var offset = ulHeight + navHeight + headerHeight;
-  console.log("ulHeight: " + ulHeight);
-  console.log("navHeight: " + navHeight);
-  console.log("headerHeight: " + headerHeight);
   $("header form").css({"top": offset});
   $("header form").addClass('active').slideDown();
 }
