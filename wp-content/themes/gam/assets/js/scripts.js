@@ -95,7 +95,7 @@ function catMenu() {
 }
 
 function mobileSearchBar() {
-  var ulHeight = $("#cats").height() + 20;
+  var ulHeight = $("#cats").height();
   var navHeight = $("nav").height();
   var headerHeight = $("header").height();
   var offset = ulHeight + navHeight + headerHeight;
