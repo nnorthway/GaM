@@ -13,6 +13,7 @@
     <link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet" type='text/css'>
     <link rel='stylesheet' href='<?php bloginfo('stylesheet_url'); ?>' type='text/css' />
     <script src='<?php echo get_template_directory_uri(); ?>/assets/js/jquery.js' type='text/javascript'></script>
+    <script src='<?php echo get_template_directory_uri(); ?>/assets/js/scrollstop.js' type='text/javascript'></script>
     <script src='<?php echo get_template_directory_uri(); ?>/assets/js/scripts.js' type='text/javascript'></script>
   </head>
 <body class='row'>
