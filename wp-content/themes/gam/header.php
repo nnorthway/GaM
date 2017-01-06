@@ -44,6 +44,19 @@
         <li><a>...</a></li>
         <li><a>...</a></li>
         */
+      ?>
+      <ul id='cats'>
+        <?php
+        $params = array(
+          'echo' => true,
+          'hide_empty' => 1,
+          'hide_title_if_empty' => 1,
+          'style' => 'list'
+        );
+        wp_list_categories($params);
+        ?>
+      </ul>
+      <?php
       get_search_form();
     ?>
   </header>

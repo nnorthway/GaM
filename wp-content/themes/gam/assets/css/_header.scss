@@ -130,7 +130,6 @@ header {
     form {
       display: none;
       position: absolute;
-      top: 378px;
       left: 0;
       background: white;
       border-bottom: 3px solid $BrandPrimary;
@@ -151,6 +150,82 @@ header {
         -webkit-box-align: stretch;
             -ms-flex-align: stretch;
                 align-items: stretch;
+      }
+    }
+  }
+}
+
+#cats {
+  list-style: none;
+  .categories {
+    color: white;
+    padding: 20px;
+    &:hover,
+    &.clicked {
+      background: $BrandPrimary;
+      color: darken(white, 10%);
+      cursor: pointer;
+      ul {
+        box-shadow: 4px 1px 9px -1px rgba(0,0,0,0.75);
+        display: block;
+        position: absolute;
+        left: 93%;
+        background: $BrandPrimary;
+        li {
+          a {
+            display: block;
+            padding: 20px;
+            &:hover {
+              background: lighten($BrandPrimary, 10%);
+              color: darken(white, 10%);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    ul {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    display: none;
+    &.active {
+      display: block;
+      position: absolute;
+      top: 378px;
+      left: 0;
+      width: 100%;
+      background: $dark;
+      text-align: center;
+      .categories {
+        color: white;
+        padding: 0;
+        padding-top: 20px;
+        background: $BrandPrimary;
+        &:hover {
+          background: $BrandPrimary;
+          cursor: default;
+        }
+        ul {
+          box-shadow: none;
+          display: block;
+          position: relative;
+          left: 0;
+          bottom: 0;
+          background: $dark;
+          margin-top: 20px;
+          li {
+            a {
+              display: block;
+              padding: 20px;
+              &:hover {
+                background: $BrandPrimary;
+                color: darken(white, 10%);
+              }
+            }
+          }
+        }
       }
     }
   }

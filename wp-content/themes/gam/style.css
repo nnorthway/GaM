@@ -1213,7 +1213,6 @@ header {
       header form {
         display: none;
         position: absolute;
-        top: 378px;
         left: 0;
         background: white;
         border-bottom: 3px solid #FA2E83;
@@ -1234,6 +1233,64 @@ header {
           -webkit-box-align: stretch;
           -ms-flex-align: stretch;
           align-items: stretch; } }
+
+#cats {
+  list-style: none; }
+  #cats .categories {
+    color: white;
+    padding: 20px; }
+    #cats .categories:hover, #cats .categories.clicked {
+      background: #FA2E83;
+      color: #e6e6e6;
+      cursor: pointer; }
+      #cats .categories:hover ul, #cats .categories.clicked ul {
+        box-shadow: 4px 1px 9px -1px rgba(0, 0, 0, 0.75);
+        display: block;
+        position: absolute;
+        left: 93%;
+        background: #FA2E83; }
+        #cats .categories:hover ul li a, #cats .categories.clicked ul li a {
+          display: block;
+          padding: 20px; }
+          #cats .categories:hover ul li a:hover, #cats .categories.clicked ul li a:hover {
+            background: #fb60a1;
+            color: #e6e6e6;
+            cursor: pointer; }
+    #cats .categories ul {
+      display: none; }
+  @media (max-width: 768px) {
+    #cats {
+      display: none; }
+      #cats.active {
+        display: block;
+        position: absolute;
+        top: 378px;
+        left: 0;
+        width: 100%;
+        background: #292929;
+        text-align: center; }
+        #cats.active .categories {
+          color: white;
+          padding: 0;
+          padding-top: 20px;
+          background: #FA2E83; }
+          #cats.active .categories:hover {
+            background: #FA2E83;
+            cursor: default; }
+          #cats.active .categories ul {
+            box-shadow: none;
+            display: block;
+            position: relative;
+            left: 0;
+            bottom: 0;
+            background: #292929;
+            margin-top: 20px; }
+            #cats.active .categories ul li a {
+              display: block;
+              padding: 20px; }
+              #cats.active .categories ul li a:hover {
+                background: #FA2E83;
+                color: #e6e6e6; } }
 
 footer {
   background: #FA2E83;
