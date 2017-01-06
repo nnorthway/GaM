@@ -85,7 +85,9 @@ function catMenu() {
  if ($(window).width() > 768) {
     var pos = $("#cats").position().top;
     var ulHeight = $("#cats ul").height();
-    var offset = pos - ulHeight - 56;
+    var liCount = $("#cats ul li").length;
+    console.log(liCount);
+    var offset = pos - ulHeight - ((liCount * 20) - (liCount * 1.3));
     $("#cats ul").css({"top": offset});
   } else {
     $("#cats ul").removeAttr("style");
@@ -93,10 +95,13 @@ function catMenu() {
 }
 
 function mobileSearchBar() {
-  var ulHeight = $(".categories").height();
+  var ulHeight = $("#cats").height() + 20;
   var navHeight = $("nav").height();
   var headerHeight = $("header").height();
   var offset = ulHeight + navHeight + headerHeight;
+  console.log("ulHeight: " + ulHeight);
+  console.log("navHeight: " + navHeight);
+  console.log("headerHeight: " + headerHeight);
   $("header form").css({"top": offset});
   $("header form").addClass('active').slideDown();
 }
