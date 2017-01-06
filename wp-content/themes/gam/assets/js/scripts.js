@@ -66,13 +66,6 @@ $(window).on('scroll', function() {
     fixHeader();
   }
 })
-$(window).on('scrollstop', function() {
-  $('header').fadeIn();
-})
-
-$(window).on('scrollstop', function() {
-
-})
 
 function navToggle() {
   if ($('nav').hasClass('active')) {
@@ -119,7 +112,6 @@ function fixHeader() {
   var pageY = window.pageYOffset;
   var pos = $("header").position().top;
   if (!$('nav').hasClass('active')) {
-    $('header').fadeOut();
     $("header").css({"top": pageY});
   } else {
     if (pos > pageY) {
