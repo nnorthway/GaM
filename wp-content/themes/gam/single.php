@@ -48,7 +48,7 @@ get_header(); ?>
                     ?><a href='<?php echo get_field('itunes'); ?>' target='_blank'><i class='socicon-itunes'></i></a><?php
                   }
                   if (get_field('soundcloud')) {
-                    ?><a href='<?php echo get_field('soundcloud'); ?>' target='_blank'><i class='socicon-soundcloud'></i></a><?php
+                    ?><a href='<?php echo get_field('soundcloud'); ?>' target='_blank' id='sc_url'><i class='socicon-soundcloud'></i></a><?php
                   }
                   if (get_field('youtube')) {
                     ?><a href='<?php echo get_field('youtube'); ?>' target='_blank'><i class='socicon-youtube'></i></a><?php
@@ -63,6 +63,21 @@ get_header(); ?>
                     ?><a href='<?php echo get_field('tunein'); ?>' target='_blank'><img id='tunein_icon' class='img-icon' src='<?php echo get_template_directory_uri(); ?>/assets/images/tunein.png' /></a><?php
                   }
                   ?>
+                </div>
+                <div id='sc_player'>
+                  <iframe id="sc-widget" src="https://w.soundcloud.com/player/?url=<?php echo get_field('soundcloud'); ?>" width="100%" scrolling="no" frameborder="no"></iframe>
+                  <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+                  <script type="text/javascript">
+                    (function(){
+                      var widgetIframe = document.getElementById('sc-widget'),
+                          widget       = SC.Widget(widgetIframe);
+
+                      widget.bind(SC.Widget.Events.READY, function() {
+                        widget.bind(SC.Widget.Events.PLAY, function() {
+                        });
+                      });
+                    }());
+                  </script>
                 </div>
               <?php endif; ?>
             </div>

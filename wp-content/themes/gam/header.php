@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:400,500|Material+Icons" rel="stylesheet" type='text/css'>
     <link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet" type='text/css'>
     <link rel='stylesheet' href='<?php bloginfo('stylesheet_url'); ?>' type='text/css' />
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
     <script src='<?php echo get_template_directory_uri(); ?>/assets/js/jquery.js' type='text/javascript'></script>
     <script src='<?php echo get_template_directory_uri(); ?>/assets/js/scrollstop.js' type='text/javascript'></script>
     <script src='<?php echo get_template_directory_uri(); ?>/assets/js/scripts.js' type='text/javascript'></script>
