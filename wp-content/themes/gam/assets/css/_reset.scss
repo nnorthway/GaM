@@ -42,13 +42,32 @@ table {
 	border-spacing: 0;
 }
 
+input[type='submit'] {
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	&:hover,
+	&:active,
+	&:focus {
+		-webkit-appearance: none;
+		   -moz-appearance: none;
+		        appearance: none;
+	}
+}
+
 button {
 	outline: none;
 	border: none;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
 	&:hover,
 	&:active,
 	&:focus {
 		outline: none;
 		border: none;
+		-webkit-appearance: none;
+		   -moz-appearance: none;
+		        appearance: none;
 	}
 }
