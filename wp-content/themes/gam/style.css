@@ -1059,7 +1059,8 @@ input[type='submit'],
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
-header {
+header,
+header.col-sm-3 {
   background: #292929;
   border-right: 3px solid #FA2E83;
   z-index: 999;
@@ -1072,42 +1073,56 @@ header {
   display: flex;
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap; }
-  header .logo img {
+  header .logo img,
+  header.col-sm-3 .logo img {
     width: 100%;
     height: auto; }
-  header #menu-toggle {
+  header #menu-toggle,
+  header.col-sm-3 #menu-toggle {
     display: none;
     color: #FA2E83;
     background: transparent; }
-  header nav {
+  header nav,
+  header.col-sm-3 nav {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto; }
-    header nav li {
+    header nav li,
+    header.col-sm-3 nav li {
       list-style: none; }
-      header nav li.current-menu-item {
+      header nav li.current-menu-item,
+      header.col-sm-3 nav li.current-menu-item {
         background-color: #FA2E83; }
-        header nav li.current-menu-item a {
+        header nav li.current-menu-item a,
+        header.col-sm-3 nav li.current-menu-item a {
           color: #efefef; }
-          header nav li.current-menu-item a:hover {
+          header nav li.current-menu-item a:hover,
+          header.col-sm-3 nav li.current-menu-item a:hover {
             background-color: #fb60a1; }
-      header nav li a {
+      header nav li a,
+      header.col-sm-3 nav li a {
         color: white;
         display: block;
         padding: 20px; }
-        header nav li a:hover {
+        header nav li a:hover,
+        header.col-sm-3 nav li a:hover {
           color: #cccccc;
           background-color: #FA2E83; }
-  header form .input-field label {
+  header form .input-field label,
+  header.col-sm-3 form .input-field label {
     display: block; }
-  header form .input-field span input {
+  header form .input-field span input,
+  header.col-sm-3 form .input-field span input {
     width: 50%; }
-  header form .input-field:after {
+  header form .input-field:after,
+  header.col-sm-3 form .input-field:after {
     width: calc(50% + 20px); }
-  header a {
+  header a,
+  header.col-sm-3 a {
     text-decoration: none; }
-  @media (max-width: 768px) {
-    header {
+  @media (max-width: 768px), (max-height: 712px) {
+    header,
+    header.col-sm-3 {
       border-bottom: 3px solid #FA2E83;
       border-right: none;
       display: -webkit-box;
@@ -1127,23 +1142,32 @@ header {
       bottom: 0;
       left: 0;
       width: 100%;
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      max-width: 100%;
       height: 55px; }
-      header .logo img {
+      header .logo img,
+      header.col-sm-3 .logo img {
         height: 55px;
         width: auto; }
-      header #menu-toggle {
+      header #menu-toggle,
+      header.col-sm-3 #menu-toggle {
         display: block; }
-        header #menu-toggle .material-icons {
+        header #menu-toggle .material-icons,
+        header.col-sm-3 #menu-toggle .material-icons {
           font-size: 3em; }
-        header #menu-toggle:hover {
+        header #menu-toggle:hover,
+        header.col-sm-3 #menu-toggle:hover {
           cursor: pointer; }
-      header nav {
+      header nav,
+      header.col-sm-3 nav {
         background: #292929;
         display: none;
         position: absolute;
         top: 58px;
         left: 0; }
-        header nav.active {
+        header nav.active,
+        header.col-sm-3 nav.active {
           width: 100%;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -1158,16 +1182,19 @@ header {
           -webkit-box-align: stretch;
           -ms-flex-align: stretch;
           align-items: stretch; }
-          header nav.active a {
+          header nav.active a,
+          header.col-sm-3 nav.active a {
             text-align: center; }
-      header form {
+      header form,
+      header.col-sm-3 form {
         display: none;
         position: absolute;
         left: 0;
         background: white;
         border-bottom: 3px solid #FA2E83;
         background: #292929; }
-        header form.active {
+        header form.active,
+        header.col-sm-3 form.active {
           display: block;
           width: 100%;
           display: -webkit-box;
@@ -1208,7 +1235,7 @@ header {
             cursor: pointer; }
     #cats .categories ul {
       display: none; }
-  @media (max-width: 768px) {
+  @media (max-width: 768px), (max-height: 712px) {
     #cats {
       display: none; }
       #cats.active {
@@ -1265,8 +1292,8 @@ body {
   margin-left: 0 !important;
   margin-right: 0 !important; }
 
-main {
-  margin-left: -3px;
+main.col-sm-9,
+main.col-sm-offset-3 {
   min-height: 100vh;
   background: #efefef;
   overflow-x: hidden;
@@ -1283,39 +1310,62 @@ main {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
-  @media (max-width: 768px) {
-    main {
+  @media (max-width: 768px), (max-height: 712px) {
+    main.col-sm-9,
+    main.col-sm-offset-3 {
       margin-top: 58px; } }
-  main .page {
+  @media (max-height: 712px) {
+    main.col-sm-9,
+    main.col-sm-offset-3 {
+      width: 100%;
+      margin-left: 0;
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      max-width: 100%; } }
+  main.col-sm-9 .page,
+  main.col-sm-offset-3 .page {
     padding-top: 25px;
     min-height: calc(100vh - 125px); }
-  main.single .post, main.page .post {
+  main.col-sm-9.single .post, main.col-sm-9.page .post,
+  main.col-sm-offset-3.single .post,
+  main.col-sm-offset-3.page .post {
     min-height: calc(100vh - 125px);
     border-bottom: none; }
-  main.single .thumbnail, main.page .thumbnail {
+  main.col-sm-9.single .thumbnail, main.col-sm-9.page .thumbnail,
+  main.col-sm-offset-3.single .thumbnail,
+  main.col-sm-offset-3.page .thumbnail {
     width: 100%;
     text-align: center; }
-    main.single .thumbnail img, main.page .thumbnail img {
+    main.col-sm-9.single .thumbnail img, main.col-sm-9.page .thumbnail img,
+    main.col-sm-offset-3.single .thumbnail img,
+    main.col-sm-offset-3.page .thumbnail img {
       max-width: 50%;
       margin: 0 auto; }
-  main .post {
+  main.col-sm-9 .post,
+  main.col-sm-offset-3 .post {
     margin: 25px auto;
     border-bottom: 5px solid #30F7FA; }
-    main .post .head {
+    main.col-sm-9 .post .head,
+    main.col-sm-offset-3 .post .head {
       padding: 3.125%; }
-      main .post .head .post-thumb {
+      main.col-sm-9 .post .head .post-thumb,
+      main.col-sm-offset-3 .post .head .post-thumb {
         width: 100%;
         text-align: center; }
-        main .post .head .post-thumb img {
+        main.col-sm-9 .post .head .post-thumb img,
+        main.col-sm-offset-3 .post .head .post-thumb img {
           width: 100%;
           max-width: 614px;
           height: auto;
           margin: 0 auto; }
-      main .post .head .meta {
+      main.col-sm-9 .post .head .meta,
+      main.col-sm-offset-3 .post .head .meta {
         font-size: .75em; }
-        main .post .head .meta .material-icons {
+        main.col-sm-9 .post .head .meta .material-icons,
+        main.col-sm-offset-3 .post .head .meta .material-icons {
           font-size: 1.5em; }
-      main .post .head .social {
+      main.col-sm-9 .post .head .social,
+      main.col-sm-offset-3 .post .head .social {
         padding: 3em;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1330,37 +1380,47 @@ main {
         -ms-flex-pack: distribute;
         justify-content: space-around;
         text-align: center; }
-        main .post .head .social:before {
+        main.col-sm-9 .post .head .social:before,
+        main.col-sm-offset-3 .post .head .social:before {
           content: "Listen";
           -webkit-box-flex: 0;
           -ms-flex: 0 0 100%;
           flex: 0 0 100%;
           display: block;
           font-size: 2.5em; }
-        main .post .head .social [class^='socicon-'] {
+        main.col-sm-9 .post .head .social [class^='socicon-'],
+        main.col-sm-offset-3 .post .head .social [class^='socicon-'] {
           font-size: 2.5em; }
-        main .post .head .social a {
+        main.col-sm-9 .post .head .social a,
+        main.col-sm-offset-3 .post .head .social a {
           padding: 0 5px;
           text-decoration: none; }
-    main .post .thumbnail {
+    main.col-sm-9 .post .thumbnail,
+    main.col-sm-offset-3 .post .thumbnail {
       text-align: center;
       max-height: 300px; }
       @media (min-width: 1400px) {
-        main .post .thumbnail {
+        main.col-sm-9 .post .thumbnail,
+        main.col-sm-offset-3 .post .thumbnail {
           max-height: 500px; } }
-      main .post .thumbnail img {
+      main.col-sm-9 .post .thumbnail img,
+      main.col-sm-offset-3 .post .thumbnail img {
         height: auto;
         max-height: 300px;
         width: auto;
         max-width: 100%; }
         @media (min-width: 1400px) {
-          main .post .thumbnail img {
+          main.col-sm-9 .post .thumbnail img,
+          main.col-sm-offset-3 .post .thumbnail img {
             max-height: 500px; } }
-    main .post .body {
+    main.col-sm-9 .post .body,
+    main.col-sm-offset-3 .post .body {
       padding: 3.125%; }
-    main .post .foot {
+    main.col-sm-9 .post .foot,
+    main.col-sm-offset-3 .post .foot {
       padding: 20px; }
-      main .post .foot .meta {
+      main.col-sm-9 .post .foot .meta,
+      main.col-sm-offset-3 .post .foot .meta {
         margin-bottom: 20px; }
 
 /*# sourceMappingURL=style.css.map */

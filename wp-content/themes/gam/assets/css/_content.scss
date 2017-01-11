@@ -3,8 +3,8 @@ body {
   margin-right: 0 !important;
 }
 
-main {
-  margin-left: -3px;
+main.col-sm-9,
+main.col-sm-offset-3 {
   min-height: 100vh;
   background: $gray;
   overflow-x: hidden;
@@ -21,8 +21,15 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  @media (max-width: 768px) {
+  @media (max-width: 768px), (max-height: 712px) {
     margin-top: 58px;
+  }
+  @media (max-height: 712px) {
+    width: 100%;
+    margin-left: 0;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%;
   }
   .page {
     padding-top: 25px;

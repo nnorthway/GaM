@@ -1,4 +1,5 @@
-header {
+header,
+header.col-sm-3 {
   background: $dark;
   border-right: 3px solid $BrandPrimary;
   z-index: 999;
@@ -66,7 +67,7 @@ header {
   a {
     text-decoration: none;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 768px), (max-height: 712px) {
     border-bottom: 3px solid $BrandPrimary;
     border-right: none;
     display: -webkit-box;
@@ -86,6 +87,9 @@ header {
     bottom: 0;
     left: 0;
     width: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%;
     height: 55px;
     .logo {
       img {
@@ -189,7 +193,7 @@ header {
       display: none;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 768px), (max-height: 712px) {
     display: none;
     &.active {
       display: block;

@@ -62,7 +62,7 @@ $(window).on('resize', function() {
 })
 
 $(window).on('scroll', function() {
-  if ($(window).width() < 768) {
+  if ($(window).width() < 768 || $(window).height() < 712) {
     fixHeader();
   }
 })
@@ -112,10 +112,14 @@ function fixHeader() {
   var pageY = window.pageYOffset;
   var pos = $("header").position().top;
   if (!$('nav').hasClass('active')) {
-    $("header").css({"top": pageY});
+    $("header").css({
+      "top": pageY
+    });
   } else {
     if (pos > pageY) {
-      $("header").css({"top": pageY});
+      $("header").css({
+        "top": pageY
+      });
     }
   }
 }
