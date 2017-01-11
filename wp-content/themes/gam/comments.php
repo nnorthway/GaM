@@ -12,7 +12,7 @@ if (post_password_required()) {
 
 if (have_comments()) :
   ?>
-<div class='comments'>
+<div class='comment-wrapper'>
   <h2>
     <?php
     printf(
@@ -22,16 +22,14 @@ if (have_comments()) :
     ?>
   </h2>
   <?php
-  wp_list_comments( array(
-    'style' => 'ol'
-  ));
+  wp_list_comments();
   ?>
 </div>
 <?php
 comment_form();
 elseif (!have_comments() && comments_open()) :
   ?>
-<div class='comments'>
+<div class='comment-wrapper'>
   <?php
   $aria_req = 'required';
   $fields = array(
