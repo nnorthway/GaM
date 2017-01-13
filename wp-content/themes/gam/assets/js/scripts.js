@@ -62,7 +62,7 @@ $(window).on('resize', function() {
 })
 
 $(window).on('scroll', function() {
-  if ($(window).width() < 768 || $(window).height() < 712) {
+  if ($(window).width() < 768) {
     fixHeader();
   }
 })

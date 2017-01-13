@@ -12,6 +12,10 @@ header.col-sm-3 {
   display: flex;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
+  overflow-y: scroll;
+  @media (max-width: 768px) {
+    overflow-y: visible;
+  }
   .logo {
     img {
       width: 100%;
@@ -67,7 +71,7 @@ header.col-sm-3 {
   a {
     text-decoration: none;
   }
-  @media (max-width: 768px), (max-height: 712px) {
+  @media (max-width: 768px) {
     border-bottom: 3px solid $BrandPrimary;
     border-right: none;
     display: -webkit-box;
@@ -193,7 +197,7 @@ header.col-sm-3 {
       display: none;
     }
   }
-  @media (max-width: 768px), (max-height: 712px) {
+  @media (max-width: 768px) {
     display: none;
     &.active {
       display: block;
