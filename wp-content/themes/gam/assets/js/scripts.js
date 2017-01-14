@@ -1,5 +1,6 @@
-var isSafari = false;
+
 $(document).ready(function() {
+  var isSafari = false;
   $("#menu-toggle").on('click', function() {
     navToggle();
   })
@@ -9,7 +10,7 @@ $(document).ready(function() {
     $("header").addClass('safariDisplay');
   }
 
-  catMenu();
+  catMenu(isSafari);
 
   $('main, footer').on('click', function() {
     if ($("nav").hasClass('active')) {
@@ -59,11 +60,11 @@ $(window).on('resize', function() {
   if ($(window).width() > 575) {
     $('nav').removeClass('active').attr("style", "");
     $('#menu-toggle').find('.material-icons').text('menu');
-    catMenu();
+    catMenu(isSafari);
   }
   if ($(window).width() > 768) {
     $("nav, header form, #cats").removeAttr("style");
-    catMenu();
+    catMenu(isSafari);
   }
 })
 
@@ -93,8 +94,8 @@ function navToggle() {
   }
 }
 
-function catMenu() {
- if ($(window).width() > 768 && !isSafari) {
+function catMenu(safariFlag) {
+ if ($(window).width() > 768 && !safariFlag) {
     var pos = $("#cats").position().top;
     var ulHeight = $("#cats ul").height();
     var liCount = $("#cats ul li").length;
