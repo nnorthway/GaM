@@ -3,6 +3,13 @@ $(document).ready(function() {
     navToggle();
   })
 
+  var isSafari = false;
+
+  if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+    isSafari = true;
+    $("header").addClass('safariDisplay');
+  }
+
   catMenu();
 
   $('main, footer').on('click', function() {
@@ -88,7 +95,7 @@ function navToggle() {
 }
 
 function catMenu() {
- if ($(window).width() > 768) {
+ if ($(window).width() > 768 && !isSafari) {
     var pos = $("#cats").position().top;
     var ulHeight = $("#cats ul").height();
     var liCount = $("#cats ul li").length;
