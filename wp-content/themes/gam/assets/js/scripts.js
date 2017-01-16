@@ -1,6 +1,5 @@
-
+var isSafari = false;
 $(document).ready(function() {
-  var isSafari = false;
   $("#menu-toggle").on('click', function() {
     navToggle();
   })
