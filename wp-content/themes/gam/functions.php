@@ -13,4 +13,8 @@ function theme_prefix_setup() {
     add_theme_support( 'custom-logo' );
 }
 add_action( 'after_setup_theme', 'theme_prefix_setup' );
+show_admin_bar(true);
+if ( ! current_user_can( 'manage_options' ) ) {
+    show_admin_bar( false );
+}
 ?>

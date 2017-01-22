@@ -13,4 +13,5 @@
     echo $social_menu;
     ?>
   </div>
+  <?php wp_footer(); ?>
 </footer>

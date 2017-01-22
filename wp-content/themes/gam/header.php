@@ -43,7 +43,6 @@ if ($theDescription != '') {
       wp_title('|', true, 'right');
       bloginfo('name'); ?>
     </title>
-    <meta name='description' content='<?php echo $theDescription; ?>' />
     <meta name='robots' content='index,follow,noodp' />
     <meta name='googlebot' content='index,follow' />
     <meta name='google' content='nositelinkssearchbox' />
@@ -54,23 +53,10 @@ if ($theDescription != '') {
     <meta name='referrer' content='no-referrer' />
     <meta name='format-detection' content='telephone=no' />
     <meta name='x-dns-prefetch-control' content='off' />
-    <meta name='ICBM' content='43.0389° N, 87.9065° W' />
-    <meta name='geo.position' content='43.0389° N;87.9065° W' />
+    <meta name='ICBM' content='43.0389, 87.9065' />
+    <meta name='geo.position' content='43.0389;87.9065' />
     <meta name='geo.region' content='US[WI]' />
     <meta name='geo.placename' content='Milwaukee' />
-    <meta property='og:url' content='https://www.facebook.com/gameandmoviepodcast' />
-    <meta property='og:type' content='website' />
-    <meta property='og:title' content='<?php echo $thetitle; ?>' />
-    <meta property='og:image' content='<?php echo get_site_icon_url(); ?>' />
-    <meta property='og:description' content='<?php echo $theDescription; ?>' />
-    <meta property='og:site_name' content='Game and Movie Podcast' />
-    <meta property='og:locale' content='en_US' />
-    <meta property='article:author' content='<?php echo $theAuthor; ?>' />
-    <meta name='twitter:card' content='<?php echo $theDescription; ?>' />
-    <meta name='twitter:site' content='@GAMEANDMOVIEUSA' />
-    <meta name='twitter:title' content='<?php echo $theTitle; ?>' />
-    <meta name='twitter:description' content='<?php echo $theDescription; ?>' />
-    <meta name='twitter:image' content='<?php echo get_site_icon_url(); ?>' />
     <meta itemprop='name' content='<?php echo $theTitle; ?>' />
     <meta itemprop='description' content='<?php $cutDesc; ?>' />
     <meta itemprop='image' content='<?php echo the_custom_logo(); ?>' />
@@ -87,6 +73,7 @@ if ($theDescription != '') {
     <script src='<?php echo get_template_directory_uri(); ?>/assets/js/jquery.js' type='text/javascript'></script>
     <script src='<?php echo get_template_directory_uri(); ?>/assets/js/scrollstop.js' type='text/javascript'></script>
     <script src='<?php echo get_template_directory_uri(); ?>/assets/js/scripts.js' type='text/javascript'></script>
+    <?php wp_head(); ?>
   </head>
 <body class='row'>
   <header class='col-sm-3'>
